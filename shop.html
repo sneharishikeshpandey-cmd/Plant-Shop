@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+
+    /* Search Bar */
+    .ghi {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .ghi form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .ghi input[type="text"] {
+      font-size: 18px;
+      padding: 12px;
+      width: 60%;
+      max-width: 400px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .ghi button {
+      font-size: 18px;
+      padding: 12px 20px;
+      border: none;
+      background-color: #3f704d;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .ghi button:hover {
+      background-color: #2f5b3a;
+    }
+
+    /* Grid Container */
+    .abc {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    /* Product Card */
+    .def {
+      background-color: rgb(53, 179, 53);
+      padding: 16px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .def:hover {
+      transform: translateY(-5px);
+    }
+
+    .def img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .def p {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    /* Responsive Text Scaling */
+    @media (max-width: 768px) {
+      .ghi input[type="text"],
+      .ghi button {
+        width: 100%;
+        font-size: 16px;
+      }
+
+      .ghi form {
+        flex-direction: column;
+      }
+
+      .def p {
+        font-size: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .def p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Search Section -->
+  <div class="ghi">
+    <form>
+      <input type="text" placeholder="What are you looking for?" />
+      <button type="submit">SEARCH</button>
+    </form>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="abc">
+    <div class="def">
+      <img src="https://m.media-amazon.com/images/I/81XWpVvk5AL._UF1000,1000_QL80_.jpg" alt="Aloe Vera" />
+      <p>Aloe Vera<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://images.unsplash.com/photo-1532920161727-344adb090f7f?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmFtYm9vfGVufDB8fDB8fHww" alt="Bamboo" />
+      <p>Bamboo<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://gardenerspath.com/wp-content/uploads/2024/11/How-to-Water-Cactus-Feature.jpg" alt="Cactus" />
+      <p>Cactus<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://gachwala.in/wp-content/uploads/2022/06/IMAGE-1-13.webp" alt="Money plant" />
+      <p>Money Plant<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://floralkashmir.in/public/uploads/all/RtaY8F3wX8S2Xk4Qx8k33EIMhIlao8aB5YX2TOVx.jpg" alt="Maple" />
+      <p>Maple<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2023/10/352817977/FG/EN/CM/198977399/pansy-flower-plant.jpg" alt="Pansy" />
+      <p>Pansy Plant<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNXiMzfpL-jDrpQIzWX2qKQtdQnyI_5VLTQ&s" alt="Orchid" />
+      <p>Orchid Plant<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSws5soXkV8N5cbRP1CFv60_vXSAlDxdiPXqw&s" alt="Tansy" />
+      <p>Tansy Plant<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://i.ytimg.com/vi/TRah6MhVfBg/maxresdefault.jpg" alt="Tulip" />
+      <p>Tulip Plant<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://dukaan.b-cdn.net/700x700/webp/media/e2492484-d73c-4f58-957b-2d017d0f2758.png" alt="Zinnia" />
+      <p>Zinnia Plant<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://rukminim2.flixcart.com/image/704/844/xif0q/plant-sapling/s/k/o/no-annual-no-sweet-basil-plant-1-plastic-bag-kapebonavista-original-imaghsjysqygbwyt.jpeg?q=90&crop=false" alt="Basil" />
+      <p>Basil Plant<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2022/11/CE/DM/YP/34468923/1-jpg-500x500.jpg" alt="Baby's Breath" />
+      <p>Baby's Breath<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://www.southernliving.com/thmb/lJ33cHiLHjUloZlfDX1UppUJ_DA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1176988236-2000-c8f09103b3f5459ebd1528b7ea264c4e.jpg" alt="Dandelion" />
+      <p>Dandelion<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://creativefarmer.in/cdn/shop/products/23554_1024x1024_a26c0d9c-9a75-4edc-b0c6-1d85c5bcf9aa.jpg?v=1616308984" alt="Sunflower" />
+      <p>Sunflower<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://wildroots.in/wp-content/uploads/2022/11/lemonbuttonfern3.jpg" alt="Fern" />
+      <p>Fern<br>Price</p>
+    </div>
+    <div class="def">
+      <img src="https://www.bloomybliss.com/wp-content/uploads/2020/01/IMG_2388-scaled.jpg" alt="Daisy" />
+      <p>Daisy<br>Price</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+
+    .contact {
+      background: rgb(53, 179, 53);
+      color: #fff;
+      padding: 40px 20px;
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 36px;
+    }
+
+    .contact h2 {
+      text-align: center;
+      font-size: 20px;
+      margin-bottom: 30px;
+      font-weight: normal;
+      color: #e0ffe0;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      font-size: 16px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contact-form button {
+      padding: 14px;
+      background: #fff;
+      color: #3a773a;
+      border: none;
+      font-size: 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #e6e6e6;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 16px;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: #3a773a;
+      color: white;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .contact {
+        padding: 30px 15px;
+      }
+
+      .contact h1 {
+        font-size: 28px;
+      }
+
+      .contact h2 {
+        font-size: 16px;
+      }
+
+      .contact-form {
+        font-size: 14px;
+      }
+
+      footer {
+        font-size: 14px;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="contact">
+    <h1>Contact Us</h1>
+    <h2>We'd love to hear from you! Reach out to us using the form or details below:</h2>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> contact@example.com</p>
+      <p><strong>Phone:</strong> 987654321</p>
+      <p><strong>Address:</strong> 123 Plant Street, Green City</p>
+    </div>
+
+    <form class="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Sneha Pandey — All rights reserved.</p>
+  </footer>
+</body>
+</html>

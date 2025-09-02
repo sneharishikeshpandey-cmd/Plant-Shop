@@ -1,0 +1,171 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THE PLANT NEST</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        /* Your existing styles here (same as before) */
+
+        .flx {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        ul.flx {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul.flx li {
+            margin-right: 25px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 600;
+        }
+
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .txt-content {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            margin: 50px auto 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .txt-content h1 {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 900px) {
+            nav.flx {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .logo {
+                flex: 1 1 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            ul.flx {
+                flex: 1 1 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 15px;
+                padding: 0;
+            }
+
+            ul.flx li {
+                margin-right: 0;
+            }
+
+            .cart {
+                flex: 1 1 100%;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .txt-content {
+                max-width: 90%;
+                margin: 30px auto;
+                padding: 15px;
+                background: rgba(255, 255, 255, 0.85);
+            }
+
+            .txt-content h1 {
+                font-size: 2rem;
+            }
+
+            .txt-content p {
+                font-size: 1rem;
+            }
+
+            .txt-content button {
+                font-size: 1rem;
+                padding: 10px 20px;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .txt-content h1 {
+                font-size: 1.4rem;
+            }
+
+            .txt-content p {
+                font-size: 0.9rem;
+            }
+
+            .txt-content button {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="flx">
+            <div class="logo">
+                <h4>THE PLANT NEST</h4>
+            </div>
+
+            <ul class="flx">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a href="shop.html" class="nav-link">Plants</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="cart">
+                <h4>log in / Register</h4>
+            </div>
+        </nav>
+    </header>
+
+    <div class="txt-content">
+        <h1>Delivering <span>Plants,</span><br />
+            Delivering<span> Happiness</span></h1>
+
+        <p>Shop your favourite plants in your favourable factor, Veggies, Seeds<br />
+            Cactus, Fruits Trees, Herbs and more....</p>
+
+        <button>Explore More</button>
+    </div>
+
+    <img src="Nature.jpg" alt="Background Nature" class="bg" />
+
+    <script>
+      window.addEventListener('load', () => {
+        const txtContent = document.querySelector('.txt-content');
+        if (txtContent) {
+          txtContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    </script>
+</body>
+</html>
