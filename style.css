@@ -1,60 +1,88 @@
+/* Reset and base */
 body {
     background-color: rgb(123, 231, 123);
-    overflow: hidden;
+    /* Removed overflow: hidden to enable scrolling */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    min-height: 150vh; /* Ensure enough height for scrolling */
 }
 
+/* Flex container for navigation */
 .flx {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-header{
+/* Header styles */
+header {
     padding: 50px;
     font-size: 40px;
 }
 
+/* Navigation list items */
 li {
     list-style: none;
     cursor: pointer;
     font-weight: 500;
-    font-style: 30px;
     font-size: 50px;
     margin: 10px 20px;
-    text-decoration: underline ;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.bg{
-    position: absolute;
-    top: 15%;
-    right: 0;
-    width: 50%;
-    height: 80%;
-    object-fit: contain;
+/* Hover effects for buttons and nav items */
+button:hover,
+li:hover {
+    background-color: rgb(18, 112, 34);
+    color: black;
 }
 
-.txt-content{
-    position: absolute;
-    top: 40%;
-    left: 5%;
+/* Background image styles */
+.bg {
+    position: fixed; /* Fixed so it stays during scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7;
 }
 
-.txt-content h1{
+/* Text content container */
+.txt-content {
+    position: relative; /* Changed from absolute to relative for natural flow */
+    max-width: 600px;
+    margin: 40vh auto 0 auto; /* Push down from top */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Heading inside text content */
+.txt-content h1 {
     font-size: 100px;
+    margin: 0;
 }
 
-span{
+/* Highlight span */
+span {
     color: rgb(18, 112, 34);
 }
 
-.txt-content p{
+/* Paragraph styling */
+.txt-content p {
     font-size: 40px;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
-
-button{
+/* Button styling */
+button {
     background-color: black;
     padding: 15px 30px;
     font-size: 30px;
@@ -63,12 +91,57 @@ button{
     margin-top: 20px;
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-button:hover, li:hover{
-    background-color: rgb(18, 112, 34);
-    color: black;
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    header {
+        padding: 20px;
+        font-size: 28px;
+    }
 
+    li {
+        font-size: 28px;
+        margin: 8px 12px;
+    }
+
+    .txt-content {
+        max-width: 90%;
+        margin: 35vh auto 0 auto;
+        padding: 15px;
+    }
+
+    .txt-content h1 {
+        font-size: 48px;
+    }
+
+    .txt-content p {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 20px;
+        padding: 12px 24px;
+        width: 100%;
+    }
 }
 
+@media (max-width: 480px) {
+    li {
+        font-size: 20px;
+        margin: 6px 10px;
+    }
 
+    .txt-content h1 {
+        font-size: 32px;
+    }
+
+    .txt-content p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
